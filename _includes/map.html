@@ -1,0 +1,47 @@
+<div class="map"></div>
+
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false" style=""></script>
+<script>
+    var initialize = function() {
+        var content = document.getElementsByClassName('map')[0];
+        content.style.height = (window.outerHeight * 0.7) + 'px';
+
+        var myLatlng = new google.maps.LatLng(48.149868, 11.576046);
+        var mapOptions = {
+            zoom: 15,
+            center: myLatlng,
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            scrollwheel: false
+        };
+
+        var map = new google.maps.Map(content, mapOptions);
+
+        var contentString = '' +
+            '<div class="map-marker">' +
+            '<h1>Pure&nbsp;Labs UG (haftungsbeschr&auml;nkt)</h1>' +
+            '<p>' +
+            'T&uuml;rkenstra&szlig;e 60 (Rgb, Ug)' +
+            '<br>' +
+            '80799 M&uuml;nchen' +
+            '</p>' +
+            '<p>' +
+            '<a href="mailto:hello@purelabs.de">hello@purelabs.de</a>'
+            '</p>' +
+            '</div>' +
+            '';
+
+        var infowindow = new google.maps.InfoWindow({
+            content: contentString
+        });
+
+        var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map,
+            title: 'Pure Labs'
+        });
+
+        infowindow.open(map, marker);
+    };
+
+    google.maps.event.addDomListener(window, 'load', initialize);
+</script>

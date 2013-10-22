@@ -1,0 +1,19 @@
+{
+  "name": "PureLabsWebsite",
+  "version": "1.0.0",
+  "description": "Pure Labs Website",
+  "author": {
+    "name": "Sebastian Slomski",
+    "email": "me@sebslomski.com"
+  },
+  "engines": {
+    "npm": "*",
+    "node": "*"
+  },
+  "dependencies": {
+    "grunt": "*",
+    "grunt-contrib-less": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-jekyll": "*"
+  }
+}
