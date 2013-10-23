@@ -1,8 +1,16 @@
 @headerHeight: 107px;
 
+html.no-touch {
+    body {
+        margin-top: @headerHeight - 1;
+    }
 
-body {
-    margin-top: @headerHeight - 1;
+    .header-menu.pure-menu.pure-menu-open  {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
 }
 
 
