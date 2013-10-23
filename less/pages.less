@@ -2,7 +2,7 @@
 
 
 body {
-    margin-top: @headerHeight -1;
+    margin-top: @headerHeight - 1;
 }
 
 
@@ -46,6 +46,21 @@ body {
 
 .sticky-bar-hire {
     text-align: right;
+
+    p {
+        float: none;
+        display: inline-block;
+        margin: 0;
+        margin-right: 15px;
+
+        span {
+            padding: 2px 10px;
+
+            border-radius: 2px;
+
+            background: fade(#00e17d, 30%);
+        }
+    }
 }
 
 
@@ -61,6 +76,10 @@ body {
 .container {
     margin: 0 auto;
     max-width: 960px;
+
+    img {
+        display: block;
+    }
 }
 
 
@@ -87,4 +106,17 @@ body {
 
 .map {
     width: 100%;
+}
+
+
+.map-marker {
+    padding: 15px;
+
+    h1 {
+        float: left;
+        margin: 0;
+        margin-bottom: 8px;
+
+        font-size: 18px;
+    }
 }
