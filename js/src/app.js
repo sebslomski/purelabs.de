@@ -1,6 +1,7 @@
 $(function() {
     if ($('html').hasClass('no-touch')) {
         var $header = $('#header');
+        var $stickyBar = $('#sticky-bar');
         var $headerLogo = $('#header-logo');
         var $headerName = $('#header-name');
         var headerLogoMinHeight = 50;
@@ -32,7 +33,6 @@ $(function() {
 
             $headerLogo.css({
                 transform: translateValue,
-                //height: headerLogoHeight
             });
 
             $headerName.css({

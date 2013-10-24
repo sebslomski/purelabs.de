@@ -7,6 +7,14 @@
     -ms-transition: @val;
 }
 
+
+.animation(@val) {
+    animation: @val;
+    -webkit-animation: @val;
+    -moz-animation: @val;
+    -ms-animation: @val;
+}
+
 .border-radius(@val) {
     border-radius: @val;
     -webkit-border-radius: @val;
@@ -27,4 +35,20 @@ body {
     font-family: "Droid Sans", helvetica;
     line-height: 1.5;
     color: #00587c;
+}
+
+
+@keyframes show  {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@-webkit-keyframes show  {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@-moz-keyframes show  {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }
