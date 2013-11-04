@@ -2,6 +2,48 @@
 
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false" style=""></script>
 <script>
+    var styles = [
+        {
+        "featureType": "poi",
+        "stylers": [
+          { "visibility": "off" }
+        ]
+        },{
+        },{
+        "featureType": "administrative",
+        "stylers": [
+          { "visibility": "off" }
+        ]
+        },{
+        "featureType": "road",
+        "stylers": [
+          { "saturation": -100 },
+          { "lightness": 40 },
+          { "gamma": 1.11 }
+        ]
+        },{
+        "featureType": "landscape",
+        "stylers": [
+          { "saturation": -100 },
+          { "lightness": 39 },
+          { "gamma": 0.89 }
+        ]
+        },{
+        "featureType": "water",
+        "stylers": [
+          { "gamma": 1.18 },
+          { "saturation": -41 }
+        ]
+        },{
+        "featureType": "transit",
+        "stylers": [
+          { "visibility": "off" }
+        ]
+        },{
+        "featureType": "administrative",
+        "elementType": "geometry"  }
+    ];
+
     var initialize = function() {
         var content = document.getElementsByClassName('map')[0];
         content.style.height = (window.outerHeight * 0.7) + 'px';
@@ -11,7 +53,8 @@
             zoom: 15,
             center: myLatlng,
             mapTypeId: google.maps.MapTypeId.ROADMAP,
-            scrollwheel: false
+            scrollwheel: false,
+            styles: styles
         };
 
         var map = new google.maps.Map(content, mapOptions);
