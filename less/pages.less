@@ -1,12 +1,17 @@
 .header {
+    position: relative;
     display: table;
     width: 100%;
-    background: #00afce;
+
+    background-image: url(/images/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 
     color: #fff;
 
     & > div {
         display: table-row;
+        background: fade(#00afce, 60%);
 
         & > div {
             display: table-cell;
