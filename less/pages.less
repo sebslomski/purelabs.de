@@ -1,114 +1,82 @@
-@headerHeight: 107px;
-
-html.no-touch {
-    body {
-        margin-top: @headerHeight - 1;
-    }
-
-    .header-menu.pure-menu.pure-menu-open  {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-    }
-}
-
-
-.header-menu.pure-menu.pure-menu-open  {
-    height: @headerHeight;
-
-    border-bottom: 1px solid #b3cdd8;
-
-    background: #ecf8fa;
-
-    text-align: center;
-}
-
-
-.header-menu .pure-menu-heading {
-    padding: 15px;
-
-    img {
-        height: 50px;
-    }
-
-    p {
-        height: 20px;
-        margin: 0;
-    }
-}
-
-
-.sticky-bar {
-    position: fixed;
-    bottom: 0;
+.header {
+    display: table;
     width: 100%;
-    z-index: 10000;
-    padding: 15px;
-
-    border-top: 1px solid #b3cdd8;
-
-    background: fade(#ecf8fa, 95%);
-
-    text-align: center;
-
-    .animation(show 0.6s 3s both);
-
-    p {
-        float: none;
-        display: inline-block;
-        margin: 0;
-        margin-right: 15px;
-
-        span {
-            padding: 2px 10px;
-
-            border-radius: 2px;
-
-            background: fade(#00e17d, 30%);
-        }
-    }
-}
-
-
-.container-wrapper {
-    float: left;
-    width: 100%;
-    padding: 8.5em 0;
-
-    border-bottom: 1px solid #b3cdd8;
-}
-
-
-.container {
-    margin: 0 auto;
-    max-width: 960px;
-
-    img {
-        display: block;
-    }
-}
-
-
-.teaser-wrapper {
-    float: left;
-    width: 100%;
-    padding: 6em 0;
-
-    background: #00b6d6;
+    background: #00afce;
 
     color: #fff;
-    text-align: center;
-}
 
+    & > div {
+        display: table-row;
 
-.customers {
+        & > div {
+            display: table-cell;
+            vertical-align: middle;
+        }
+    }
+
     img {
         display: block;
-        width: 80%;
-        margin: 10%;
+        width: 250px;
+    }
+
+    img, h1, p {
+        margin: 0 auto;
+
+        text-align: center;
+    }
+
+    h1 {
+        text-transform: uppercase;
+    }
+
+    p {
+        font-style: italic;
     }
 }
+
+
+.navigation {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    z-index: 10000;
+
+    text-align: right;
+
+    a {
+        display: block;
+        padding: 8px 16px;
+
+        color: #00afce;
+        text-decoration: none;
+        line-height: 1;
+
+        .transition(all 0.3s);
+    }
+
+    li.s-is-selected {
+        font-size: 30px;
+    }
+}
+
+
+.portfolio {
+    & > div {
+        height: 20em;
+
+        border: 1px solid #e5e5e3;
+        border-right: none;
+        border-top: none;
+    }
+}
+
+
+
+
+
+
+
+
 
 
 .map {
