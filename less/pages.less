@@ -195,7 +195,22 @@
         }
 
         & > div {
-            .transition(background 0.8s);
+            background: none;
+
+            h3, p {
+                position: relative;
+                z-index: 210;
+            }
+
+            & > div {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 200;
+                .transition(all 0.4s);
+            }
         }
 
         &:hover {
@@ -203,7 +218,9 @@
                 background: fade(#fff, 0%);
             }
 
-            & > div {
+            & > div > div {
+                top: 0;
+
                 background: fade(#fff, 80%);
             }
         }
