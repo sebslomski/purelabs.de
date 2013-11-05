@@ -109,7 +109,101 @@
 }
 
 
+.portfolio-image {
+    position: relative;
 
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    & > div {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: 100;
+        padding: 10px 20px;
+
+        background: fade(#fff, 60%);
+
+        h3 {
+            margin: 0;
+
+            font-weight: 300;
+        }
+
+        p {
+            margin: 0;
+
+            color: #000;
+        }
+    }
+
+    &.cutterslounge-app {
+        background-image: url(/images/portfolio/cutterslounge-app.png);
+        background-position: 50% 0;
+    }
+
+    &.klangfeld-website {
+        background-image: url(/images/portfolio/klangfeld-website.png);
+        background-position: 50% 0;
+    }
+
+    &.cutterslounge-mobile {
+        background-image: url(/images/portfolio/cutterslounge-mobile.png);
+    }
+
+    &.friendscalc-app {
+        background-image: url(/images/portfolio/friendscalc-app.png);
+    }
+
+    &.slomski-zahntechnik-website {
+        background-image: url(/images/portfolio/slomski-zahntechnik-website.png);
+        background-position: 50% 0;
+    }
+
+    &.cutterslounge-website {
+        background-image: url(/images/portfolio/cutterslounge-website.png);
+        background-position: 50% 0;
+    }
+
+    &.lovednoise-website {
+        background-image: url(/images/portfolio/lovednoise-website.png);
+        background-position: 50% 0;
+    }
+}
+
+.no-touch {
+    .portfolio-image {
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+            background: fade(#fff, 85%);
+
+            .transition(background 0.8s);
+        }
+
+        & > div {
+            .transition(background 0.8s);
+        }
+
+        &:hover {
+            &:after {
+                background: fade(#fff, 0%);
+            }
+
+            & > div {
+                background: fade(#fff, 80%);
+            }
+        }
+    }
+}
 
 
 
