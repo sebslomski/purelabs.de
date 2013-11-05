@@ -10,7 +10,7 @@ $(function() {
     });
 
 
-    $nav.find('a[href^="#"]').click(function (e) {
+    $('a[href^="#"]').click(function (e) {
         e.preventDefault();
         var $targetElem = $($(this).attr('href'));
         $(window).scrollTo($targetElem.position().top - 100, 1000);
@@ -58,7 +58,7 @@ $(function() {
     $('#hello').parallax('50%', 0.4);
 
 
-    var headerSubtitle = 'Pushing  pixels   to      shift   bits'.split('');
+    var headerSubtitle = 'Pushing  pixels   to      shift   bits.'.split('');
     var $headerSubtitle = $('#header-subtitle');
     var currentHeaderSubtitle = '';
 
